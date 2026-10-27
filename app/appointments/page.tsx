@@ -1,0 +1,3 @@
+import type {Metadata} from 'next';import {Suspense} from 'react';import {AppointmentForm} from '@/components/forms';
+export const metadata:Metadata={title:'Request an Appointment'};
+export default function Appointments(){return <section className="appointment-page"><div className="container"><div className="appointment-heading"><span className="eyebrow">A simple next step</span><h1 className="h2">Let’s find a time to talk.</h1><p className="lead">Share a few details to prepare a demonstration appointment request. No real booking will be made.</p></div><Suspense fallback={<div className="booking-loading">Loading appointment form…</div>}><AppointmentForm/></Suspense></div></section>}
